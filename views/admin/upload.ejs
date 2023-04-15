@@ -1,0 +1,93 @@
+<!-- code fo the navbar starts -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top"style="background-color:cadetblue">
+    <div class="container" >
+        <a class="navbar-brand" href="" style="font-size: 2rem;"> <img src="/images/logo.png" alt="" width="45" height="40" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ml-auto" style="color:white;font-weight: bolder;">
+            <li class="nav-item">
+                <a href="/" class="nav-link">Hello</a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/upload" class="nav-link">Add Doc</a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/logout" class="nav-link">Logout</a>
+              </li>
+        </ul>
+    </div>
+    </div>
+    
+</nav>
+<!-- code for the navbar ends -->
+<!-- code for the upload section starts -->
+    <section>
+        <div class="container mt-5 " >
+            <h1 class="text-center" style="font-family:cursive;color: black;">Upload Your Document</h1>
+
+            <% if (check1.length>0) { %>
+              <div class="alert alert-success text-align-center" role="alert">
+                file uploaded Successfully
+              </div>
+            <% } %>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="FileName" class="lead">FileName</label>
+                    <input
+                    type="text"
+                    name="fileName"
+                    class="form-control"
+                    id="fileName"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter file name"
+                  />
+                </div>
+                <div class="form-group">
+                    <label for="FileNames" class="lead">registrationNumber</label>
+                    <input
+                    type="text"
+                    name="registrationNumber"
+                    class="form-control"
+                    id="fileNames"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter file name"
+                  />
+                </div>
+                
+                <div class="form-group" >
+                    <label class="lead">File Description</label>
+                    <textarea
+                      
+                      rows="5"
+                      cols="50"
+                      name="hash"
+                      class="form-control"
+                      id="hash"
+                      aria-describedby="emailHelp"
+                      
+                      placeholder="Enter file description"
+                    >
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label class="lead">Choose File</label>
+                    <input type="file" class="form-control-file" id="fileInput" name="file"/>
+                </div>
+                
+                <div class="form-group">
+                    <button
+                      name="submit"
+                      type="submit"
+                      class="btn text-light mt-2 btn btn-success"
+                      style=" width: 100%"
+                    >
+                      Upload Your File
+                    </button>
+                  </div>
+            </form>        
+        </div>
+    </section>
+<!-- code for the Upload section ends -->
