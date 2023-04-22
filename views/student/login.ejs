@@ -1,0 +1,86 @@
+<!-- code fo the navbar starts -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top"style="background-color:cadetblue">
+    <div class="container" >
+        <a class="navbar-brand" href="" style="font-size: 2rem;"> <img src="/images/logo.png" alt="" width="45" height="40" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about_us" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#getstarted" class="nav-link">Get Started</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact-footer" class="nav-link">Contact</a>
+              </li>
+        </ul>
+    </div>
+    </div>
+    
+</nav>
+<!-- code for the navbar ends -->
+
+<!-- code for the login section starts -->
+<section class="text-light p-lg-0 text-sm-start">
+    <div class="contianer-fluid bg-warning text-dark p-3 mb-5">
+        <h1 class="text-center"style="font-family:cursive">
+            Students's Login
+        </h1>
+
+        
+    </div>
+    <!-- check for correct reg no and password -->
+    <% if (check1.length>0) { %>
+      <div class="alert alert-danger text-align-center" role="alert">
+        Password Not Correct
+      </div>
+    <% } %>
+    <% if (check2.length>0) { %>
+      <div class="alert alert-danger text-align-center" role="alert">
+        Registration Number not registered
+      </div>
+    <% } %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto mt-5 mb-5">
+          
+          <h1 class="text-center"style="font-family:cursive;color:Black;">Welcome To 
+          <span class="text-success">DocuSafe</span>
+          </h1>
+          <img src="/images/student_login.webp" alt="" srcset="" class="img-fluid d-none d-md-block"style="width:100%;height:73%;">
+        </div>
+        <div class="col-md-6 mx-auto mt-5">
+          <h1 class="text-center">
+            <span style="color:black;font-family: cursive;">
+              Login
+            </span>
+          </h1>
+          
+          <form action='/student/login' method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="lead "style="color:Black">Registration Number</label>
+              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Registration Number" name="registrationNumber">
+              
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="lead "style="color:Black">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  name="password">
+            </div>
+            
+            <button type="submit" class="btn btn-success" style="width:100%;background-color:cadetblue ;">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</section>
+<!--code for the login section ends-->
